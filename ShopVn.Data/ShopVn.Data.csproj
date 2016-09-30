@@ -46,7 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Infrastructure\DbFactory.cs" />
+    <Compile Include="Infrastructure\Disposable.cs" />
+    <Compile Include="Infrastructure\IDbFactory.cs" />
+    <Compile Include="Infrastructure\IUnitOfWork.cs" />
+    <Compile Include="Infrastructure\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShopVNDbContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -56,6 +62,10 @@
     <ProjectReference Include="..\ShopVN.Common\ShopVN.Common.csproj">
       <Project>{4afd7935-0913-4dbc-8418-44b44d4500b0}</Project>
       <Name>ShopVN.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShopVn.Model\ShopVn.Model.csproj">
+      <Project>{511f06b6-64f5-4779-80f3-ec8074ff9735}</Project>
+      <Name>ShopVn.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
